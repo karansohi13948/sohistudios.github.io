@@ -4,11 +4,65 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sohi Studios — Simple, Powerful Android Apps</title><link href="images/logo.png" rel="icon" type="image/png"/>
-<meta content="Sohi Studios creates simple, powerful, and user-friendly Android applications. Explore our apps on Google Play Store." name="description"/>
+        <!-- Primary Meta Tags -->
+<title>Sohi Studios — Simple, Powerful Android Apps</title>
+<meta name="title" content="Sohi Studios — Simple, Powerful Android Apps">
+<meta name="description" content="Sohi Studios creates simple, powerful, and user-friendly Android applications. Explore our apps on Google Play Store.">
+<meta name="keywords" content="Sohi Studios, Android apps, Google Play developer, Lost and Found app, Image Compressor, Android developer, India">
+<meta name="author" content="Sohi Studios">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://sohistudios.com/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
+<!-- Theme -->
+<meta name="theme-color" content="#6C3CE1">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sohistudios.com/">
+<meta property="og:title" content="Sohi Studios — Simple, Powerful Android Apps">
+<meta property="og:description" content="Simple, powerful and user-friendly Android applications.">
+<meta property="og:image" content="https://sohistudios.com/favicon.png">
+<meta property="og:site_name" content="Sohi Studios">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sohi Studios — Simple, Powerful Android Apps">
+<meta name="twitter:description" content="Simple, powerful and user-friendly Android applications.">
+<meta name="twitter:image" content="https://sohistudios.com/favicon.png">
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Sohi Studios",
+  "url":"https://sohistudios.com",
+  "logo":"https://sohistudios.com/images/logo.png",
+  "email":"contact@sohistudios.com",
+  "sameAs":[
+    "https://play.google.com/store/apps/dev?id=7261380358756530850"
+  ]
+}
+</script>     
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Sohi Studios",
+  "url":"https://sohistudios.com"
+}
+</script>
+        
 <style>
         :root {
             --sohi-primary: #6C3CE1;
@@ -622,7 +676,7 @@
 </div>
 </div>
 <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-<p class="text-gray-600 text-sm">© 2025 Sohi Studios. All rights reserved.</p>
+<p class="text-gray-600 text-sm">© <span id="year"></span> Sohi Studios. All rights reserved.</p>
 <p class="text-gray-700 text-xs">Google Play and the Google Play logo are trademarks of Google LLC.</p>
 </div>
 </div>
@@ -709,6 +763,8 @@
                 if (link.getAttribute('href') === '#' + current) link.classList.add('!text-white');
             });
         });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
 
         // --- Contact form ---
         document.getElementById('contactForm').addEventListener('submit', (e) => {
